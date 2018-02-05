@@ -6,7 +6,7 @@ const app = express()
 const options = {
   key: fs.readFileSync('/etc/letsencrypt/live/meusite.com.br/privkey.pem'),
   cert: fs.readFileSync('/etc/letsencrypt/live/meusite.com.br/fullchain.pem'),
-  ca: fs.readFileSync('/sites/CA/ca_br.crt'),
+  ca: fs.readFileSync('/sites/CA/bundle.crt'),
   requestCert: true,
   rejectUnauthorized: false
 }

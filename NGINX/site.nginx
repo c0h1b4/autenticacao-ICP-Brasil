@@ -26,7 +26,7 @@ server {
         # optional -> verifica se tem o certificado. Se não tiver, continua com o site funcionando sem apresentar tela de erro. Você poderá verificar na página PHP ou JS (nodejs) se o certificado foi validado e quais os dados do certificado e apresentar uma mensagem ao usuário informando se não foi possível validar o certificado.
         # on -> força o usuário a utilizar o certificado, apresentado a página de erro 400 Bad Request, com o texto 'No required SSL certificate was sent'. Você poderá fazer uma página custom mas acho que a opção 'optional' dá uma melhor experiência ao usuário.
 
-        ssl_client_certificate /sites/CA/ca_br.crt;
+        ssl_client_certificate /sites/CA/bundle.crt;
         ssl_verify_client optional;
         ssl_verify_depth 10;
 
